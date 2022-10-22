@@ -7,7 +7,7 @@ public class FirstAndLastOccurrenceOfX {
     public static void main(String[] args) {
         int numArray[]={1,2,2,2,3,4,4,5,6};
         int n=numArray.length;
-        int x=9;
+        int x=4;
 
         System.out.println(findFisrtAndLastOccurrence(numArray,n,x));
     }
@@ -31,7 +31,7 @@ public class FirstAndLastOccurrenceOfX {
         }
     }
 
-    //Lower Bound - number>=
+    //Lower Bound - The first element which is not less than x
     private static int lowerBound(int[] numArray, int n, int x) {
         int low=0;
         int high=n-1;
@@ -50,6 +50,8 @@ public class FirstAndLastOccurrenceOfX {
         }
         return ans;
     }
+
+    //Upper Bound - The first element which is greater than x
     private static int upperBound(int[] numArray, int n, int x) {
         int low=0;
         int high=n-1;
